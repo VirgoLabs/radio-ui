@@ -6,6 +6,7 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
+import Radio from "@/components/Radio";
 
 export default function HomeScreen() {
   const colorScheme = useColorScheme();
@@ -32,6 +33,15 @@ export default function HomeScreen() {
       </ThemedView>
 
       {/* Component usage */}
+      <Radio
+        options={[
+          { id: 1, label: 'First', value: 'first' },
+          { id: 2, label: 'Second', value: 'second' },
+          { id: 3, label: 'Third', value: 'third' },
+          { id: 4, label: 'Third', value: 'fourth' },
+        ]}
+        onValueChange={(_, index) => { }}
+      />
       {/* Simple Component View */}
 
       <ThemedText type="title">Usecases of the Button</ThemedText>
